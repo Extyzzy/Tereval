@@ -1,0 +1,10 @@
+// app global css
+.highlight
+  color #34B5E8
+
+fluid-font-size($minimumSize = 12, $maximumSize = 36, $minimumViewportWidth = 300, $maximumViewportWidth = 1600)
+  font-size 'calc(%spx + (%s - %s) * ((100vw - %spx) / (%s - %s))) !important' % ($minimumSize $maximumSize $minimumSize $minimumViewportWidth $maximumViewportWidth $minimumViewportWidth)
+
+for num in (8 .. 28)
+  .fontsize-{num}
+    fluid-font-size num (num * 2 + 2) 300 1800
